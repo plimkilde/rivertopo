@@ -23,6 +23,7 @@ def test_regulativprofilsimpel(regulativprofilsimpel_layer):
     regulativprofilsimpel_layer.CreateFeature(feature)
 
     profile = RegulativProfilSimpel(feature)
+    breakpoint()
 
     x = np.array([-4.0, -3.0, -1.0, 0.0, 1.0, 1.5, 2.0, 2.5])
     expected_y = np.array([43.5, 43.0, 42.0, 42.0, 42.0, 42.5, 43.0, 43.5])

@@ -11,6 +11,8 @@ POINT_ID_NODATA = np.iinfo(POINT_ID_TYPE).min # Avoid colliding with valid index
 SEGMENT_ID_TYPE = np.int64
 SEGMENT_ID_NODATA = np.iinfo(SEGMENT_ID_TYPE).min # Avoid colliding with valid index values
 
+#ParameterizedRaster = namedtuple('ParameterizedRaster', ['x', 'y', 'feature', 'chainage', ])
+
 def parameterize_grid(grid_xy, linestring):
     linestring_points = np.array(linestring.GetPoints())[:,:2]
     linestring_startpoints = linestring_points[:-1,:]
